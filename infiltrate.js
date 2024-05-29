@@ -126,7 +126,7 @@ const infiltrationGames = [
         },
     },
     {
-        name: "attack when his guard is down",
+        name: "attack after the guard drops his guard and is distracted",
         init: function (screen) {
             state.game.data = "wait";
         },
@@ -140,7 +140,7 @@ const infiltrationGames = [
 
             // Attack in next frame - instant attack sometimes
             // ends in failure.
-            if ('wait' === state.game.data && (data.indexOf("Preparing?") !== -1)) {
+            if ('wait' === state.game.data && (data.indexOf("Distracted!") !== -1)) {
                 state.game.data = "attack";
             }
         },
